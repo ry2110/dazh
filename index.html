@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <img src="ICON.ico" draggable="false" style="position: fixed;">
+        <meta name="viewport" charset="utf-8" content="width=device-width, inital-scale=1">
+        <link rel="icon" type="image/x-icon" href="ICON.ico">
+        <nav>
+            <center>
+                <button id="h" style="width: 250px; height: 50px;" onclick="h()">Home</button>
+                <button id="a" style="width: 250px; height: 50px;" onclick="a()">About</button>
+                <button id="c" style="width: 250px; height: 50px;" onclick="c()">Contact</button>
+                <button id="d" style="width: 250px; height: 50px;" onclick="d()">Download</button>
+            </center>
+        </nav>
+        <title>Dazh</title>
+    </head>
+    <body>
+        <style>
+            html, input, button, head {
+                user-select: none;
+                -moz-user-select: none;
+                -webkit-user-select: none;
+                -webkit-user-drag: none;
+                -moz-window-dragging: no-drag;
+                font-family: monospace;
+                font-size: 35px;
+                /*cursor: url("cursor.png"), auto;*/
+            }
+            body {
+                background: url("background.png");
+                position: relative;
+            }
+
+            #h, #a, #c, #d, h1, h2, h3, h4, h5, h6, #about {
+                color: white;
+                -webkit-text-stroke: 1.5px black;
+                text-align: center;
+
+                border-color: gray grey;
+            }
+            table, tr, td {
+                background-color: white;
+                border: 1px solid black;
+            }
+            a {
+                color: black;
+                text-decoration: none;
+            }
+            #studio {
+                color: white;
+                -webkit-text-stroke: 1.5px black;
+                text-align: center;
+
+                border-color: gray grey;
+            }
+            button {
+                /*border-radius: 5%;*/
+                text-align: center;
+
+                border-color: gray grey;
+            }
+        </style>
+        <div id="home">
+            <center>
+                <h1>Welcome to Dazh!</h1>
+                <h2>What is Dazh?</h2>
+                <h3>Dazh is an mini programming language made by Ry2110 STUDIO.</h3>
+            </center>
+        </div>
+        <div id="download" style="display: none;">
+            <center>
+                <p></p>
+                <table id="downloadtable">
+                    <tr>
+                        <th>Versions</th>
+                        <th>Link</th>
+                    </tr>
+                    <tr>
+                        <td>1.0.0</td>
+                        <td><a href="https://mega.nz/folder/sSUXwCTb#mhqtYkIdvwll1NIyZ9KlVA">LINK</a></td>
+                    </tr>
+                    <tr>
+                        <td>1.0.1</td>
+                        <td><a>COMMING SOON</a></td>
+                    </tr>
+                    <tr>
+                        <td>1.0.2</td>
+                        <td><a>COMMING SOON</a></td>
+                    </tr>
+                    <tr>
+                        <td>1.0.3</td>
+                        <td><a>COMMING SOON</a></td>
+                    </tr>
+                    <tr>
+                        <td>1.0.4</td>
+                        <td><a>COMMING SOON</a></td>
+                    </tr>
+                    <tr>
+                        <td>1.0.5</td>
+                        <td><a>COMMING SOON</a></td>
+                    </tr>
+                </table>
+            </center>
+        </div>
+        <div id="about" style="display: none;">
+            <center>
+                <h3>
+                    Dazh (Programming language) was made by Tintin, 
+                    so we created Dazh for just for fun, 
+                    you can use it to make simple applications.
+                </h3>
+            </center>
+        </div>
+        <div id="contact" style="display: none;">
+            <center>
+                <h3>
+                    Dazh (Programming language)
+                    Contact us at <a id="studio" href="mailto:ry2110studio@gmail.com">our studio.</a>
+                </h3>
+            </center>
+        </div>
+        <script>
+            function h() {
+                document.getElementById("home").style.display = "block"
+                document.getElementById("about").style.display = "none"
+                document.getElementById("contact").style.display = "none"
+                document.getElementById("download").style.display = "none"
+            }
+            function a() {
+                document.getElementById("about").style.display = "block"
+                document.getElementById("home").style.display = "none"
+                document.getElementById("contact").style.display = "none"
+                document.getElementById("download").style.display = "none"
+            }
+            function c() {
+                document.getElementById("contact").style.display = "block"
+                document.getElementById("home").style.display = "none"
+                document.getElementById("about").style.display = "none"
+                document.getElementById("download").style.display = "none"
+            }
+            function d() {
+                document.getElementById("download").style.display = "block"
+                document.getElementById("home").style.display = "none"
+                document.getElementById("about").style.display = "none"
+                document.getElementById("contact").style.display = "none"
+            }
+        </script>
+    </body>
+</html>
