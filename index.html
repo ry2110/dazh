@@ -3,6 +3,7 @@
     <head>
         <img src="ICON.ico" draggable="false" style="position: fixed;">
         <meta name="viewport" charset="utf-8" content="width=device-width, inital-scale=1">
+        <link rel="icon" type="image/x-icon" href="ICON.ico">
         <nav>
             <center>
                 <button id="h" style="width: 250px; height: 50px;" onclick="h()">Home</button>
@@ -13,7 +14,6 @@
         </nav>
         <title>Dazh</title>
     </head>
-    <link rel="icon" type="image/x-icon" href="ICON.ico">
     <body>
         <style>
             html, input, button, head {
@@ -26,10 +26,20 @@
                 font-size: 35px;
                 /*cursor: url("cursor.png"), auto;*/
             }
+
             body {
                 background: url("background.png");
                 position: relative;
             }
+
+            div {
+                animation: slide 0.5s ease-in-out 1.5s forwards;
+            }
+            
+            /*@keyframes slide {
+                from {height : 0;}
+                to {height : 300px;}
+            }*/
 
             #h, #a, #c, #d, h1, h2, h3, h4, h5, h6, #about {
                 color: white;
@@ -53,11 +63,44 @@
 
                 border-color: gray grey;
             }
+            #icon {
+                transition: 0.25s ease-in-out;
+            }
+            #icon:hover {
+                transform: scale(1.5);
+            }
             button {
                 /*border-radius: 5%;*/
                 text-align: center;
 
                 border-color: gray grey;
+            }
+            #til {
+                color: greenyellow;
+            }
+            #space {
+                color: gainsboro;
+            }
+            #normal {
+                color: white;
+            }
+            #dev {
+                color: cyan;
+            }
+            #op {
+                color: red;
+            }
+            #prt {
+                color: chartreuse;
+            }
+            #comment {
+                color: gray;
+            }
+            #cod {
+                color: wheat;
+            }
+            #cre {
+                color: darkkhaki;
             }
         </style>
         <div id="home">
@@ -65,6 +108,39 @@
                 <h1>Welcome to Dazh!</h1>
                 <h2>What is Dazh?</h2>
                 <h3>Dazh is an mini programming language made by Ry2110 STUDIO.</h3>
+                <img id="icon" src="icon.png" style="width: 128px; height: 128px;" draggable="false">
+                <img id="icon" src="logo.png" style="width: 128px; height: 128px;" draggable="false">
+                <img id="icon" src="icon-dzc.png" style="width: 128px; height: 128px;" draggable="false">
+                <h3>Here is an easy syntaxes :</h3>
+                <div style="background-color: black; text-align: left;" id="example">
+                    <p id="til" style="display: inline;">til</p>
+                    <p id="space" style="display: inline;">[space]</p>
+                    <p id="normal" style="display: inline;">TITLE</p>
+                    <p id="space" style="display: inline;">[space]</p>
+                    <p id="ws"></p>
+                    <p id="dev" style="display: inline;">dev</p>
+                    <p id="space" style="display: inline;">[space]</p>
+                    <p id="normal" style="display: inline;">msg</p>
+                    <p id="space" style="display: inline;">[space]</p>
+                    <p id="op" style="display: inline;">=</p>
+                    <p id="space" style="display: inline;">Hello_world!</p>
+                    <p id="space" style="display: inline;">[space]</p>
+                    <p id="ws"></p>
+                    <p id="prt" style="display: inline;">prt</p>
+                    <p id="space" style="display: inline;">[space]</p>
+                    <p id="normal" style="display: inline;">msg</p>
+                    <p id="space" style="display: inline;">[space]</p>
+                    <p id="ws"></p>
+                    <p id="comment" style="display: inline;">? This_is_a_comment,_below_here_is_code_function,_it_is_multiline</p>
+                    <p id="space" style="display: inline;">[space]</p>
+                    <p id="ws"></p>
+                    <p id="cod" style="display: inline;">cod</p>
+                    <p id="space" style="display: inline;">[space]</p>
+                    <p id="ws"></p>
+                    <p id="cre"style="display: inline;">cre</p>
+                    <p id="space" style="display: inline;">[space]</p>
+                    <p id="normal" style="display: inline;">main.dz</p>
+                </div>
             </center>
         </div>
         <div id="download" style="display: none;">
